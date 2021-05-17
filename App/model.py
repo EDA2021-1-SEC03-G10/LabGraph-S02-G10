@@ -179,7 +179,7 @@ def minimumCostPaths(analyzer, initialStation):
     a todos los demas vertices del grafo
     """
     analyzer['paths'] = djk.Dijkstra(analyzer['connections'], initialStation)
-    return analyzer
+    return analyzer 
 
 
 def hasPath(analyzer, destStation):
