@@ -44,7 +44,7 @@ operación seleccionada.
 # ___________________________________________________
 
 
-servicefile = 'bus_routes_14000.csv'
+servicefile = 'bus_routes_50.csv'
 initialStation = None
 
 # ___________________________________________________
@@ -98,13 +98,14 @@ def optionFive(cont, destStation):
 def optionSix(cont, destStation):
     path = controller.minimumCostPath(cont, destStation)
     if path is not None:
-        pathlen = stack.size(path)
+        pathlen = stack.size(path[0])
         print('El camino es de longitud: ' + str(pathlen))
-        while (not stack.isEmpty(path)):
-            stop = stack.pop(path)
+        while (not stack.isEmpty(path[0])):
+            stop = stack.pop(path[0])
             print(stop)
     else:
         print('No hay camino')
+    print("Tiempo [ms]: ", f"{path[1]:.3f}")
 
 
 def optionSeven(cont):
