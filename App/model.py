@@ -72,6 +72,7 @@ def newAnalyzer():
         error.reraise(exp, 'model:newAnalyzer')
 
 
+
 # Funciones para agregar informacion al grafo
 
 def addStopConnection(analyzer, lastservice, service):
